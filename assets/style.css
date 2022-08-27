@@ -1,0 +1,1108 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --hover-dark-cyan: hsl(158, 48%, 26%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-graynish-blue: hsl(228, 12%, 48%);
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.content-page {
+  background-color: var(--cream);
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.card-cart {
+  width: calc(50% - 50px);
+  height: 420px;
+
+  display: inline-flex;
+
+  border-radius: 8px;
+
+  background-color: white;
+}
+
+.img-product {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px 0 0 8px;
+}
+
+.info-product {
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.info-product header p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
+  color: var(--dark-graynish-blue);
+
+  padding: 10px 0;
+  margin-top: 5px;
+
+  text-transform: uppercase;
+  font-size: 8pt;
+
+  letter-spacing: 4px;
+  line-height: 20px;
+}
+
+.info-product header h2 {
+  font-family: "Fraunces", serif;
+  font-size: 20pt;
+  width: calc(100% - 100px);
+}
+
+/* First Article */
+section article:nth-child(1) {
+  padding: 1rem 1px;
+}
+
+section article:nth-child(1) p {
+  color: var(--dark-graynish-blue);
+  font-family: var(--font-montserrat);
+
+  width: calc(100% - 10px);
+
+  text-align: left;
+
+  padding: 0 20px 0 2px;
+
+  line-height: 1.8;
+
+  font-size: 10pt;
+}
+
+/* Second Article */
+section article:nth-child(2) {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+}
+
+/* Second Article fChild */
+section article:nth-child(2) p:nth-child(1) {
+  color: var(--dark-cyan);
+
+  font-family: var(--font-fraunces);
+
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+/* Second Article sChild */
+section article:nth-child(2) p:nth-child(2) {
+  color: var(--dark-graynish-blue);
+  font-size: 10pt;
+
+  margin-left: 20px;
+
+  font-family: var(--font-montserrat);
+
+  text-decoration: line-through;
+  line-height: 2.5;
+}
+
+.button-add-to-cart {
+  padding: 15px 0;
+}
+
+.button-add-to-cart button {
+  background-color: var(--dark-cyan);
+
+  border-radius: 8px;
+  border: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+
+  color: var(--cream);
+
+  background-color: var(--dark-cyan);
+  width: 100%;
+  height: 45px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: center;
+
+  transition: 0.2s;
+}
+
+.cart-icon {
+  margin: 0 6px -2px -2px;
+}
+
+/* Hover */
+.button-add-to-cart button:hover {
+  background-color: var(--hover-dark-cyan);
+}
+
+/* GalaxyFold reference */
+@media (max-width: 280px) {
+  /* Content-Page */
+  .content-page {
+    display: block;
+    padding: 0 !important;
+  }
+
+  /* Card */
+  .card-cart {
+    /* Expressure div */
+    width: 100% !important;
+    height: 500px;
+
+    /* BG - color */
+    background-color: white;
+
+    /* Border props */
+    border-radius: 0px !important;
+    border: 1px solid red;
+  }
+
+  /* Image Product */
+  .img-product {
+    /* BG - Image */
+    background-image: url("images/image-product-mobile.jpg");
+
+    /* BG -Size */
+    background-size: cover;
+
+    /* Pos & Repeat */
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /* Expressure div */
+    height: 190px !important;
+
+    /* Border-radius */
+    border-radius: 0 !important;
+  }
+
+  /* 
+    Product Info
+    Name, Price, Description
+  */
+  .info-product {
+    padding: 0 1.5rem;
+  }
+
+  /* Header Text Card  */
+  .info-product header {
+    padding: 0.6rem 0;
+  }
+
+  .info-product header p {
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-size: 20pt;
+    width: 100%;
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 0 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    line-height: 1.5;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  /* Button Add To Cart */
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+  /* Button Add To Cart Button*/
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+
+/* Mobile First Iphone SE reference
+from iphoneSE to iphoneXR, iphone 12Pro,
+ Pixel5, galaxyS8+, GalaxyS20Ultra, surface Duo, 
+ GalaxyA51/71
+ */
+@media (max-width: 375px) {
+  /* Content-Page */
+  .content-page {
+    padding: 2.5rem;
+  }
+
+  /* Card */
+  .card-cart {
+    display: block;
+
+    /* Expressure div */
+    width: 375px;
+    height: 550px;
+
+    /* BG - color */
+    background-color: white;
+
+    /* Border props */
+    border-radius: 8px;
+    border: none;
+  }
+
+  /* Image Product */
+  .img-product {
+    /* BG - Image */
+    background-image: url("images/image-product-mobile.jpg");
+
+    /* BG -Size */
+    background-size: cover;
+
+    /* Pos & Repeat */
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /* Expressure div */
+    width: 100%;
+    height: 230px;
+
+    /* Border-radius */
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  /* 
+    Product Info
+    Name, Price, Description
+  */
+  .info-product {
+    padding: 0 1.5rem;
+  }
+
+  /* Header Text Card  */
+  .info-product header {
+    padding: 0.6rem 0;
+  }
+
+  .info-product header p {
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-size: 20pt;
+    width: 100%;
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 0 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    line-height: 1.5;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  /* Button Add To Cart */
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+  /* Button Add To Cart Button*/
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+
+/*  */
+@media (max-width: 768px) {
+  /* Content-Page */
+  .content-page {
+    padding: 1.5rem;
+  }
+
+  /* Card */
+  .card-cart {
+    display: block;
+
+    /* Expressure div */
+    width: 375px;
+    height: 550px;
+
+    /* BG - color */
+    background-color: white;
+
+    /* Border props */
+    border-radius: 8px;
+    border: none;
+  }
+
+  /* Image Product */
+  .img-product {
+    /* BG - Image */
+    background-image: url("images/image-product-mobile.jpg");
+
+    /* BG -Size */
+    background-size: cover;
+
+    /* Pos & Repeat */
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /* Expressure div */
+    width: 100%;
+    height: 230px;
+
+    /* Border-radius */
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  /* 
+    Product Info
+    Name, Price, Description
+  */
+  .info-product {
+    padding: 0 1.5rem;
+  }
+
+  /* Header Text Card  */
+  .info-product header {
+    padding: 0.6rem 0;
+  }
+
+  .info-product header p {
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-size: 20pt;
+    width: 100%;
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 0 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    line-height: 1.5;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  /* Button Add To Cart */
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+  /* Button Add To Cart Button*/
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+
+/* Tablets Apple Ipad Air reference
+  from IpadAir to IpadMini
+*/
+@media (max-width: 820px) {
+  /* Content-Page */
+  .content-page {
+    padding: 1.5rem;
+  }
+
+  /* Card */
+  .card-cart {
+    display: block;
+
+    /* Expressure div */
+    width: 375px;
+    height: 550px;
+
+    /* BG - color */
+    background-color: white;
+
+    /* Border props */
+    border-radius: 8px;
+    border: none;
+  }
+
+  /* Image Product */
+  .img-product {
+    /* BG - Image */
+    background-image: url("images/image-product-mobile.jpg");
+
+    /* BG -Size */
+    background-size: cover;
+
+    /* Pos & Repeat */
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /* Expressure div */
+    width: 100%;
+    height: 230px;
+
+    /* Border-radius */
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  /* 
+    Product Info
+    Name, Price, Description
+  */
+  .info-product {
+    padding: 0 1.5rem;
+  }
+
+  /* Header Text Card  */
+  .info-product header {
+    padding: 0.6rem 0;
+  }
+
+  .info-product header p {
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-size: 20pt;
+    width: 100%;
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 0 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    line-height: 1.5;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  /* Button Add To Cart */
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+  /* Button Add To Cart Button*/
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+
+/* Mobile Surface Pro7 reference 
+*/
+@media (max-width: 912px) {
+  /* Content-Page */
+  .content-page {
+    padding: 1.5rem;
+  }
+
+  /* Card */
+  .card-cart {
+    display: block;
+
+    /* Expressure div */
+    width: 375px;
+    height: 550px;
+
+    /* BG - color */
+    background-color: white;
+
+    /* Border props */
+    border-radius: 8px;
+    border: none;
+  }
+
+  /* Image Product */
+  .img-product {
+    /* BG - Image */
+    background-image: url("images/image-product-mobile.jpg");
+
+    /* BG -Size */
+    background-size: cover;
+
+    /* Pos & Repeat */
+    background-repeat: repeat-y;
+    background-position: center;
+
+    /* Expressure div */
+    width: 100%;
+    height: 230px;
+
+    /* Border-radius */
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  /* 
+    Product Info
+    Name, Price, Description
+  */
+  .info-product {
+    padding: 0 1.5rem;
+  }
+
+  /* Header Text Card  */
+  .info-product header {
+    padding: 0.6rem 0;
+  }
+
+  .info-product header p {
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-size: 20pt;
+    width: 100%;
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 0 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    line-height: 1.5;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 30px;
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  /* Button Add To Cart */
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+  /* Button Add To Cart Button*/
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+
+/* Reference to Nest hub,
+  Nest hub Max
+*/
+@media (min-width: 1024px) {
+  .content-page {
+    background-color: var(--cream);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-cart {
+    width: calc(50% - 50px);
+    height: 420px;
+
+    display: flex;
+
+    border-radius: 8px;
+
+    background-color: white;
+  }
+
+  .img-product {
+    background-image: url("./images/image-product-desktop.jpg");
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 8px 0 0 8px;
+  }
+
+  .info-product {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .info-product header p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    color: var(--dark-graynish-blue);
+
+    padding: 5px 0;
+    margin-top: 3px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 10px;
+  }
+
+  .info-product header h2 {
+    font-family: "Fraunces", serif;
+    font-size: 20pt;
+    width: calc(100% - 55px);
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 1rem 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    width: calc(100% - 10px);
+
+    text-align: left;
+
+    padding: 0 20px 0 2px;
+
+    line-height: 1.8;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+}
+
+@media (min-width: 1360px) {
+  .content-page {
+    background-color: var(--cream);
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-cart {
+    width: calc(50% - 50px);
+    height: 420px;
+
+    display: inline-flex;
+
+    border-radius: 8px;
+
+    background-color: white;
+  }
+
+  .img-product {
+    background-image: url("./images/image-product-desktop.jpg");
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 8px 0 0 8px;
+  }
+
+  .info-product {
+    width: 100%;
+    padding: 0.5rem 2rem;
+  }
+
+  .info-product header p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+    color: var(--dark-graynish-blue);
+
+    padding: 10px 0;
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-size: 8pt;
+
+    letter-spacing: 4px;
+    line-height: 20px;
+  }
+
+  .info-product header h2 {
+    font-family: "Fraunces", serif;
+    font-size: 20pt;
+    width: calc(100% - 100px);
+  }
+
+  /* First Article */
+  section article:nth-child(1) {
+    padding: 1rem 1px;
+  }
+
+  section article:nth-child(1) p {
+    color: var(--dark-graynish-blue);
+    font-family: var(--font-montserrat);
+
+    width: calc(100% - 10px);
+
+    text-align: left;
+
+    padding: 0 20px 0 2px;
+
+    line-height: 1.8;
+
+    font-size: 10pt;
+  }
+
+  /* Second Article */
+  section article:nth-child(2) {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+  }
+
+  /* Second Article fChild */
+  section article:nth-child(2) p:nth-child(1) {
+    color: var(--dark-cyan);
+
+    font-family: var(--font-fraunces);
+
+    font-size: 20pt;
+    font-weight: 700;
+  }
+
+  /* Second Article sChild */
+  section article:nth-child(2) p:nth-child(2) {
+    color: var(--dark-graynish-blue);
+    font-size: 10pt;
+
+    margin-left: 20px;
+
+    font-family: var(--font-montserrat);
+
+    text-decoration: line-through;
+    line-height: 2.5;
+  }
+
+  .button-add-to-cart {
+    padding: 15px 0;
+  }
+
+  .button-add-to-cart button {
+    background-color: var(--dark-cyan);
+
+    border-radius: 8px;
+    border: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    color: var(--cream);
+
+    background-color: var(--dark-cyan);
+    width: 100%;
+    height: 45px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  .cart-icon {
+    margin: 0 6px -2px -2px;
+  }
+}
+/* It's work to 1440 screen res */
